@@ -1,0 +1,22 @@
+body{
+    
+   display: flex;
+   justify-content: center;
+   background-color: azure;
+  
+}
+header{
+    background-color: cadetblue;
+    border: 2px solid;
+    border-radius: 2px;
+    border-color: blue;
+    display: flex;
+    flex-direction: column;
+}
+h4{
+    font-style: inherit;
+    text-align: center;
+    color: blue;
+}
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h4>TODU LIST</h4>
+    <input type="text"  id="user">
+    <br>
+    <button onclick="submit()">check</button>
+
+    <ul class="result">
+
+    </ul>
+</header>
+    <script>
+        let item =[];
+        function printLi(){
+
+            let li="";
+
+        for (let i=0; i< item.length; i++){
+
+        li +=`<li>
+            ${item[i]}
+
+            <button onclick="deleteitem(${i})">DELETE</button>
+
+            
+            </li>`
+
+
+        }
+        document.querySelector(".result").innerHTML= li;
+        }
+        function submit(){
+            let user=document.getElementById("user").value;
+            // console.log(user)
+            item.push(user)
+            printLi()
+        }
+        function deleteitem(id){
+            // console.log(id)
+            item.splice(id, 1);
+
+            printLi()
+        }
+
+
+    </script>
+    
+</body>
+</html>
